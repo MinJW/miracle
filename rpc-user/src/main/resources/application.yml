@@ -1,0 +1,12 @@
+spring:
+   profiles:
+      include: base             #引入配置文件
+   application:
+      name: rpc-user
+
+server:
+   port: 9081
+
+dubbo:
+   application:
+      name: rpc-user-service

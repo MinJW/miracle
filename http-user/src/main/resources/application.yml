@@ -1,0 +1,17 @@
+
+spring:
+   profiles:
+      include: base           #引入配置文件
+   application:
+      name: user-consumer
+
+server:
+   port: 8081
+
+dubbo:
+   application:
+      name: user-consumer
+   consumer:
+     timeout: 5000
+
+
