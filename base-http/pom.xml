@@ -15,7 +15,7 @@
     </parent>
 
     <name>base-http</name>
-    <description>Demo project for Spring Boot</description>
+    <description>rpc 抽取父项目</description>
 
 
     <dependencies>

@@ -1,6 +1,6 @@
 spring:
    profiles:
-      include: base             #引入配置文件
+      include: base             #寮曞叆閰嶇疆鏂囦欢
    application:
       name: rpc-user
 

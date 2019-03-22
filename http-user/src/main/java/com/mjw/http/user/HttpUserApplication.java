@@ -1,16 +1,20 @@
 package com.mjw.http.user;
 
-import org.springframework.boot.SpringApplication;
+import com.mjw.base.util.BaseUtilApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Min_j
  */
 @SpringBootApplication
-public class HttpUserApplication {
+public class HttpUserApplication extends BaseUtilApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HttpUserApplication.class, args);
+        startHttp(HttpUserApplication.class,args);
     }
 
+    @Override
+    protected String getApplicationName() {
+        return "http-user";
+    }
 }

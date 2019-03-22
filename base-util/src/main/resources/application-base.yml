@@ -1,7 +1,7 @@
 #dubbo
 dubbo:
    registry:
-      address: zookeeper://localhost:2181
+      address: zookeeper://192.168.223.129:2181
    protocol:
       name: dubbo
       port: 20880
@@ -9,3 +9,17 @@ dubbo:
       base-packages: com.mjw
    provider:
       timeout: 5000
+   consumer:
+      check: false
+      lazy: true
+
+
+#统一设置端口 防止冲突
+com:
+   mjw:
+      server:
+         port:
+            http:
+               user: 8101
+            rpc:
+               user: 9101
