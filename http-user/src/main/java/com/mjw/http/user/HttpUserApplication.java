@@ -1,13 +1,14 @@
 package com.mjw.http.user;
 
-import com.mjw.base.util.BaseUtilApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.mjw.basehttp.BaseHttpApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @author Min_j
  */
-@SpringBootApplication
-public class HttpUserApplication extends BaseUtilApplication {
+@Controller
+public class HttpUserApplication extends BaseHttpApplication {
 
     public static void main(String[] args) {
         startHttp(HttpUserApplication.class,args);
@@ -17,4 +18,5 @@ public class HttpUserApplication extends BaseUtilApplication {
     protected String getApplicationName() {
         return "http-user";
     }
+
 }

@@ -1,12 +1,21 @@
 spring:
+   #引入配置文件
    profiles:
-      include: base             #引入配置文件
+      include: base,db
+
    application:
       name: rpc-user
 
-server:
-   port: 9081
+   #数据库配置
+   datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/miracle_user?useSSL=false&characterEncoding=utf8
+      username: root
+      password: root
+
 
 dubbo:
    application:
       name: rpc-user-service
+
+

@@ -1,4 +1,4 @@
-package com.mjw.http.user;
+package com.mjw.rpc.user;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class HttpUserApplicationTests {
+public class RpcUserRequestDtoApplicationTests {
 
     @Test
     public void contextLoads() {

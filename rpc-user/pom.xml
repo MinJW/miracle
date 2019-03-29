@@ -22,13 +22,7 @@
 
         <dependency>
             <groupId>com.mjw</groupId>
-            <artifactId>base-util</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.mjw</groupId>
-            <artifactId>rpc-api</artifactId>
+            <artifactId>base-rpc</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

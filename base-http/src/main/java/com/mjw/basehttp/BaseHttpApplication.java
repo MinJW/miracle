@@ -1,13 +1,15 @@
 package com.mjw.basehttp;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.mjw.baseutil.BaseUtilApplication;
 
-@SpringBootApplication
-public class BaseHttpApplication {
+/**
+ * @Title
+ * @Description http 层父启动类
+ * @author MinJunWen
+ * @date 2019/3/27 10:31
+ */
+public abstract class BaseHttpApplication extends BaseUtilApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(BaseHttpApplication.class, args);
-    }
+
 
 }

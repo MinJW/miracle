@@ -1,15 +1,22 @@
 package com.mjw.rpc.user;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.mjw.baserpc.BaseRpcApplication;
 
-@SpringBootApplication
-@EnableDubbo
-public class RpcUserApplication {
+/**
+ * @Title
+ * @Description rpc-user启动类
+ * @author MinJunWen
+ * @date 2019/3/27 10:33
+ */
+public class RpcUserApplication extends BaseRpcApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RpcUserApplication.class, args);
+        startRpc(RpcUserApplication.class,args);
+    }
+
+    @Override
+    protected String getApplicationName() {
+        return "rpc-user";
     }
 
 }

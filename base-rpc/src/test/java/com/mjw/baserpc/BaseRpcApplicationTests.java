@@ -1,4 +1,4 @@
-package com.mjw.base.util;
+package com.mjw.baserpc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class BaseUtilApplicationTests {
+public class BaseRpcApplicationTests {
 
     @Test
     public void contextLoads() {

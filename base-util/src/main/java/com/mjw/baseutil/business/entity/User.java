@@ -1,22 +1,26 @@
-package com.mjw.user.dto;
+package com.mjw.baseutil.business.entity;
+
+import java.io.Serializable;
 
 /**
  * @Description
  * @Author MinJunWen
- * @Data 2019/3/20 17:26
+ * @Data 2019/3/28 10:54
  * @Version 1.0.0
  **/
-public class User {
+public class User implements Serializable {
 
-    private Integer userId;
+    private static final long serialVersionUID = -3534162044535382123L;
+
+    private Long userId;
     private String userName;
     private String password;
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -35,4 +39,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
