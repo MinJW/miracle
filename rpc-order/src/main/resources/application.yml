@@ -1,0 +1,25 @@
+spring:
+   #引入配置文件
+   profiles:
+      include: base,db
+
+   application:
+      name: rpc-order
+
+   #数据库配置
+   datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://192.168.223.129:5432/miracle_order
+      username: postgres
+      password: postgres
+      #driver-class-name: com.mysql.jdbc.Driver
+      #url: jdbc:mysql://localhost:3306/miracle_user?useSSL=false&characterEncoding=utf8
+      #username: root
+      #password: root
+
+
+dubbo:
+   application:
+      name: rpc-order-service
+
+
