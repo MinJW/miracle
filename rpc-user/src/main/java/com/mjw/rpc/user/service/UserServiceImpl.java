@@ -1,9 +1,9 @@
 package com.mjw.rpc.user.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.mjw.baseutil.business.entity.user.User;
 import com.mjw.baseutil.utils.BeanUtils;
 import com.mjw.rpc.user.mapper.UserMapper;
-import com.mjw.rpc.user.model.UserModel;
 import com.mjw.user.dto.request.UserRequestDto;
 import com.mjw.user.dto.response.UserResponseDto;
 import com.mjw.user.service.UserService;
@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto findUser(UserRequestDto userRequestDto) {
-        UserModel user = userMapper.find(userRequestDto);
+        User user = userMapper.find(userRequestDto);
         UserResponseDto userResponseDto = new UserResponseDto();
         BeanUtils.copyProperties(user,userResponseDto);
         return userResponseDto;

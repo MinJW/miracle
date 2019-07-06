@@ -16,6 +16,7 @@ import org.mybatis.spring.annotation.MapperScan;
  */
 public abstract class BaseRpcApplication extends BaseUtilApplication {
 
+    public static void main(String[] args) {
 
-
+    }
 }

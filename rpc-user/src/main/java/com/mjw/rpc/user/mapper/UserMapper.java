@@ -1,6 +1,6 @@
 package com.mjw.rpc.user.mapper;
 
-import com.mjw.rpc.user.model.UserModel;
+import com.mjw.baseutil.business.entity.user.User;
 import com.mjw.user.dto.request.UserRequestDto;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -22,6 +22,6 @@ public interface UserMapper {
      * @author MinJunWen
      * @date 2019/3/27 20:03
      */
-    UserModel find(UserRequestDto user);
+    User find(UserRequestDto user);
 
 }

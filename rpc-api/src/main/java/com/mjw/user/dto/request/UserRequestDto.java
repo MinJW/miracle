@@ -1,6 +1,6 @@
 package com.mjw.user.dto.request;
 
-import com.mjw.baseutil.business.entity.User;
+import com.mjw.baseutil.business.entity.user.User;
 
 /**
  * @Description

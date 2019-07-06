@@ -3,7 +3,10 @@ mybatis:
    mapper-locations: classpath:mapper/*Mapper.xml
 
    #实体类别名(不用在xml写实体类包名)
-   type-aliases-package: com.mjw
+   type-aliases-package: com.mjw.baseutil.business.entity
+spring:
+   datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
 
 
 

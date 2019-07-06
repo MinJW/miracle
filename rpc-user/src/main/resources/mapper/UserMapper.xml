@@ -16,14 +16,14 @@
         </where>
     </sql>
 
-    <resultMap id="UserModelResultMap" type="UserModel">
+    <resultMap id="UserModelResultMap" type="User">
         <result column="user_id" property="userId"/>
         <result column="user_name" property="userName"/>
         <result column="password" property="password"/>
     </resultMap>
 
-    <select id="find" resultMap="UserModelResultMap" parameterType="UserRequestDto">
-        SELECT * FROM user
+    <select id="find" resultMap="UserModelResultMap" parameterType="com.mjw.user.dto.request.UserRequestDto">
+        SELECT * FROM m_user
         <if test="_parameter != null">
             <include refid="WHERE_CLAUSE" />
         </if>

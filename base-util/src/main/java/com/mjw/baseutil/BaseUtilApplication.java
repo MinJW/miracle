@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
+import org.springframework.util.StringUtils;
 
 /**
  * @Title
@@ -41,18 +42,26 @@ public abstract class BaseUtilApplication implements WebServerFactoryCustomizer<
             throw new RuntimeException(" APPLICATION NAME IS ERROR ,PLEASE CHECK YOUR APPLICATION NAME...");
         }
 
-        Integer port = null;
+        String portStr = null;
         if(ServerTypeEnum.isHttp(applicationSplit[0])){
-            port = Integer.parseInt(serverPortConfig.getHttp().get(applicationSplit[1]));
+
+            portStr = serverPortConfig.getHttp().get(applicationSplit[1]);
         }else if(ServerTypeEnum.isRpc(applicationSplit[0])){
-            port = Integer.parseInt(serverPortConfig.getRpc().get(applicationSplit[1]));
+            portStr = serverPortConfig.getRpc().get(applicationSplit[1]);
         }
 
-        if(null == port){
+        if(StringUtils.isEmpty(portStr)){
             throw new RuntimeException(" NOT FOUNT PORT BY APPLICATION NAME IN CONFIG,PLEASE CHECK YOUR APPLICATION NAME OR CONFIG...");
         }
 
-        factory.setPort(port);
+        try{
+            factory.setPort(Integer.parseInt(portStr));
+        }catch (Exception e){
+            System.out.println("【 SERVICE POST IS ERROR 】applicationName = "+applicationName + " ,PORT = " + portStr);
+            e.printStackTrace();
+        }
+
+
     }
 
     /**

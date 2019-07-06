@@ -15,7 +15,7 @@
     </parent>
 
     <name>rpc-api</name>
-    <description>Demo project for Springapiapiapisdfdsff2</description>
+    <description>远程调用api项目</description>
 
     <dependencies>
 

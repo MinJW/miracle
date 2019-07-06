@@ -1,6 +1,6 @@
 package com.mjw.http.user.vo.response;
 
-import com.mjw.baseutil.business.entity.User;
+import com.mjw.baseutil.business.entity.user.User;
 
 /**
  * @Description

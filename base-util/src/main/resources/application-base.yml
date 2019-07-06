@@ -13,7 +13,6 @@ dubbo:
       check: false
       lazy: true
 
-
 #统一设置端口 防止冲突
 com:
    mjw:
@@ -23,3 +22,4 @@ com:
                user: 8101
             rpc:
                user: 9101
+               order: 9102

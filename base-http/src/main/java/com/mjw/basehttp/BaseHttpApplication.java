@@ -10,6 +10,8 @@ import com.mjw.baseutil.BaseUtilApplication;
  */
 public abstract class BaseHttpApplication extends BaseUtilApplication {
 
+    public static void main(String[] args) {
 
+    }
 
 }

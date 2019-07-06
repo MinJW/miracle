@@ -6,7 +6,7 @@ spring:
 
 dubbo:
    application:
-      name: user-consumer
+      name: http-user-service
    consumer:
      timeout: 5000
 

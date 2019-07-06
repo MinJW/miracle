@@ -1,4 +1,4 @@
-package com.mjw.baseutil.business.entity;
+package com.mjw.baseutil.business.entity.user;
 
 import java.io.Serializable;
 
