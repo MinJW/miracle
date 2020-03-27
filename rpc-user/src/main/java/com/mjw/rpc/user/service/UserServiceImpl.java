@@ -7,6 +7,8 @@ import com.mjw.rpc.user.mapper.UserMapper;
 import com.mjw.user.dto.request.UserRequestDto;
 import com.mjw.user.dto.response.UserResponseDto;
 import com.mjw.user.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -18,11 +20,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 public class UserServiceImpl implements UserService {
 
+
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+
     @Autowired
     private UserMapper userMapper;
 
     @Override
     public UserResponseDto findUser(UserRequestDto userRequestDto) {
+
+        logger.info(" support rpc [findUser] , requestDto = [{}]",userRequestDto);
+
         User user = userMapper.find(userRequestDto);
         UserResponseDto userResponseDto = new UserResponseDto();
         BeanUtils.copyProperties(user,userResponseDto);

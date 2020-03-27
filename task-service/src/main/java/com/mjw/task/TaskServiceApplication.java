@@ -1,7 +1,6 @@
 package com.mjw.task;
 
 import com.mjw.task.common.ExcludeBeanFilter;
-import com.mjw.task.common.ParentApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
